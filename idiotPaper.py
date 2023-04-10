@@ -39,19 +39,22 @@ def change_wallpaper():
     os.system('rundll32.exe user32.dll, UpdatePerUserSystemParameters 1, "{0}"'.format(new_wallpaper_path))
 
 window = tk.Tk()
-window.title("Wallpaper Viewer")
+window.title("Idiot Paper")
 window.geometry("300x150")
+window.resizable(False, False)
 
-label = tk.Label(window, text="Click 'View Wallpaper' to view your current wallpaper")
-label.pack(pady=3)
+label = tk.Label(window, text="Click 'View Wallpaper' to view your current wallpaper", bd=0, bg='light gray')
+label.pack(pady=5)
 
-view_button = tk.Button(window, text="View Wallpaper", command=open_wallpaper)
-view_button.pack(pady=3)
+view_button = tk.Button(window, text="View Wallpaper", command=open_wallpaper, bd=0, bg='dark gray')
+view_button.pack(pady=5)
 
-change_button = tk.Button(window, text="Change Wallpaper", command=change_wallpaper)
-change_button.pack(pady=3)
+change_button = tk.Button(window, text="Change Wallpaper", command=change_wallpaper, bd=0, bg='dark gray')
+change_button.pack(pady=5)
 
-random_button = tk.Button(window, text="Randomize", command=set_random_wallpaper)
-random_button.pack(pady=3)
+random_button = tk.Button(window, text="Randomize", command=set_random_wallpaper, bd=0, bg='dark gray')
+random_button.pack(pady=5)
+
+window.configure(bg='light gray')
 
 window.mainloop()
