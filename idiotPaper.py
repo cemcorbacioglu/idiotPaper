@@ -40,8 +40,9 @@ def change_wallpaper():
 
 window = tk.Tk()
 window.title("Idiot Paper")
-window.geometry("300x150")
+window.geometry('300x150+400+300')
 window.resizable(False, False)
+
 
 label = tk.Label(window, text="Click 'View Wallpaper' to view your current wallpaper", bd=0, bg='light gray')
 label.pack(pady=5)
@@ -54,6 +55,9 @@ change_button.pack(pady=5)
 
 random_button = tk.Button(window, text="Randomize", command=set_random_wallpaper, bd=0, bg='dark gray')
 random_button.pack(pady=5)
+
+close_button = tk.Button(window, text="Close", command=window.quit, bd=0, bg='dark gray')
+close_button.pack(pady=5)
 
 window.configure(bg='light gray')
 
