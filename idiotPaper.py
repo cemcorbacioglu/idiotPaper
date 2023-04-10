@@ -1,6 +1,5 @@
 import tkinter as tk
 import os
-import webbrowser
 from tkinter import filedialog
 import random
 import ctypes
@@ -12,7 +11,7 @@ def open_wallpaper():
     )
 
     # Open the wallpaper in the default browser
-    webbrowser.open("file://" + wallpaper_path)
+    os.startfile("file://" + wallpaper_path)
 
 def set_random_wallpaper():
     # Get the path to the folder containing the wallpapers
